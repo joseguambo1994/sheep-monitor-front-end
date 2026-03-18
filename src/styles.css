@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&family=Kalam:wght@400;700&display=swap');
+
+:root {
+  --ink: #171612;
+  --paper: #efe29e;
+  --zone-info: #2c96ff;
+  --zone-warning: #f2a93b;
+  --zone-critical: #e75454;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Baloo 2', 'Trebuchet MS', sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 12% 12%, #f7efca 0%, transparent 28%),
+    radial-gradient(circle at 85% 88%, #f4de9c 0%, transparent 33%),
+    #f4f4f4;
+}

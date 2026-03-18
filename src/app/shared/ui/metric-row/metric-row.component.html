@@ -1,0 +1,9 @@
+<article
+  class="metric-row"
+  [class.metric-row--positive]="metric().tone === 'positive'"
+  [class.metric-row--warning]="metric().tone === 'warning'"
+>
+  <div class="metric-icon" aria-hidden="true">{{ metric().iconLabel }}</div>
+  <p class="metric-label">{{ metric().label }}</p>
+  <p class="metric-value">{{ formattedValue() }}</p>
+</article>

@@ -1,0 +1,16 @@
+<main class="dashboard">
+  <section class="dashboard-card">
+    <header class="dashboard-header">
+      <h1>Borrego Simple</h1>
+      <p class="subtitle">Monitoreo de {{ facade.farmName() }}</p>
+      <p class="timestamp">Ultima captura: {{ facade.updatedAtLabel() }}</p>
+    </header>
+
+    <app-camera-feed [imageUrl]="facade.imageUrl()" [zones]="facade.zones()"></app-camera-feed>
+
+    <app-metrics-panel
+      [loading]="facade.isLoading()"
+      [metrics]="facade.metrics()"
+    ></app-metrics-panel>
+  </section>
+</main>

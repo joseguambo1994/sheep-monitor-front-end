@@ -1,0 +1,11 @@
+<section class="metrics-panel" aria-label="Resumen de conteos">
+  @if (loading()) {
+    <p class="loading">Sincronizando captura...</p>
+  } @else {
+    <div class="metrics-list">
+      @for (metric of metrics(); track metric.id) {
+        <app-metric-row [metric]="metric"></app-metric-row>
+      }
+    </div>
+  }
+</section>

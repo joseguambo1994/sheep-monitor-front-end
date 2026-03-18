@@ -1,0 +1,17 @@
+.metrics-panel {
+  margin-top: 1rem;
+}
+
+.loading {
+  margin: 0;
+  padding: 1rem;
+  border: 3px dashed color-mix(in srgb, var(--ink) 30%, transparent);
+  border-radius: 14px;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.metrics-list {
+  display: grid;
+  gap: 0.8rem;
+}

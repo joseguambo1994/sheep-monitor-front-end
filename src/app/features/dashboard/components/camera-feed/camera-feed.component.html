@@ -1,0 +1,21 @@
+<section class="camera-feed" aria-label="Camara principal del corral">
+  <div class="image-frame">
+    <img [src]="imageUrl()" alt="Vista general de ovejas dentro del corral" />
+
+    <div class="zone-layer">
+      @for (zone of zones(); track zone.id) {
+        <div
+          class="zone"
+          [class.zone--warning]="zone.severity === 'warning'"
+          [class.zone--critical]="zone.severity === 'critical'"
+          [style.left.%]="zone.leftPct"
+          [style.top.%]="zone.topPct"
+          [style.width.%]="zone.widthPct"
+          [style.height.%]="zone.heightPct"
+        >
+          <span class="zone-label">{{ zone.label }}</span>
+        </div>
+      }
+    </div>
+  </div>
+</section>

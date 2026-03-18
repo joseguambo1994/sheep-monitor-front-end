@@ -1,0 +1,68 @@
+.metric-row {
+  display: grid;
+  grid-template-columns: 4.2rem 1fr auto;
+  align-items: center;
+  gap: 0.8rem;
+  border: 3px solid color-mix(in srgb, var(--ink) 25%, transparent);
+  border-radius: 14px;
+  padding: 0.65rem 0.75rem;
+  background: color-mix(in srgb, #fff6d8 65%, white);
+}
+
+.metric-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: 3px solid var(--ink);
+  display: grid;
+  place-items: center;
+  font-size: 1.35rem;
+  font-weight: 700;
+  background: linear-gradient(150deg, #5ac8ff, #0984dc);
+  color: white;
+}
+
+.metric-row--positive .metric-icon {
+  background: linear-gradient(150deg, #79da67, #2eb05d);
+}
+
+.metric-row--warning .metric-icon {
+  background: linear-gradient(150deg, #ff8c6d, #ff3d36);
+}
+
+.metric-label,
+.metric-value {
+  margin: 0;
+}
+
+.metric-label {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-family: 'Kalam', 'Comic Sans MS', cursive;
+}
+
+.metric-value {
+  font-size: clamp(2.4rem, 5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.metric-row--positive .metric-value {
+  color: #2f9b3e;
+}
+
+.metric-row--warning .metric-value {
+  color: #d7372f;
+}
+
+@media (max-width: 620px) {
+  .metric-row {
+    grid-template-columns: 3.3rem 1fr auto;
+    gap: 0.45rem;
+  }
+
+  .metric-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.1rem;
+  }
+}

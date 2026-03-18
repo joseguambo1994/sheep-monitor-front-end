@@ -1,0 +1,69 @@
+.camera-feed {
+  margin: 0;
+}
+
+.image-frame {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  border: 4px solid var(--ink);
+  background: #dfdfdf;
+}
+
+.image-frame img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.zone-layer {
+  position: absolute;
+  inset: 0;
+}
+
+.zone {
+  position: absolute;
+  border: 3px solid var(--zone-info);
+  border-radius: 12px;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    color-mix(in srgb, var(--zone-info) 35%, transparent) 0 6px,
+    color-mix(in srgb, white 75%, transparent) 6px 11px
+  );
+}
+
+.zone--warning {
+  border-color: var(--zone-warning);
+  background-image: repeating-linear-gradient(
+    -45deg,
+    color-mix(in srgb, var(--zone-warning) 35%, transparent) 0 6px,
+    color-mix(in srgb, white 72%, transparent) 6px 11px
+  );
+}
+
+.zone--critical {
+  border-color: var(--zone-critical);
+  background-image: repeating-linear-gradient(
+    -45deg,
+    color-mix(in srgb, var(--zone-critical) 35%, transparent) 0 6px,
+    color-mix(in srgb, white 70%, transparent) 6px 11px
+  );
+}
+
+.zone-label {
+  position: absolute;
+  top: -1.7rem;
+  left: 0;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 0.14rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  line-height: 1;
+}
+
+@media (max-width: 700px) {
+  .zone-label {
+    font-size: 0.62rem;
+  }
+}
